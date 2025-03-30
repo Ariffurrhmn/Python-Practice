@@ -1,8 +1,18 @@
 import tkinter as tk
+from tkinter.filedialog import askopenfilename
+
+
+def open_file():
+    filetypes = askopenfilename(filetypes = [("Text Files", "*.txt"), ("All Files", "*.")])
+
+    if not filetypes:
+        return
+
+    text_box.delete("1.0", tk.END)
+    with open()
 
 window = tk.Tk()
 window.title("Basic Text Editior")
-
 
 window.columnconfigure(1, weight = 1, minsize = 800)
 window.rowconfigure(0, weight = 1, minsize = 800)
